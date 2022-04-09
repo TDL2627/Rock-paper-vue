@@ -32,7 +32,7 @@
     <div class="float-child2">
       <Opponent @click="play" v-on:getChoice="updateOpponentScore($event)" v-bind:choice="opponent_choice"/>
       
-      <img type="button" v-if="!opponent_choice" src="./assets/vue_question.jpeg" /> 
+      <img type="button" v-if="!opponent_choice" src="../assets/quest.png" /> 
       <img class="opponent_img" type="button" v-if="!!opponent_choice" :src="require('./assets/'+ImgSrc())" />
       
       <h2 style="color:white">Opponents choice: {{opponent_choice}}</h2>
@@ -46,8 +46,8 @@
 </template>
 
 <script>
-import Player from './components/Player.vue'
-import Opponent from './components/Opponent.vue'
+import Player from '../components/Player.vue'
+import Opponent from '../components/Opponent.vue'
 
 const choices = ["rock", "paper", "scissors"];
 export default {
@@ -74,13 +74,13 @@ export default {
       }, 
     ImgSrc() {
       if (this.opponent_choice == "rock") {
-        return "rock.jpeg"
+        return "rock.png"
       }
       else if (this.opponent_choice == "paper") {
-        return "paper.jpeg"
+        return "paper.png"
       }
       else  {
-        return "scissors.jpeg"
+        return "scissors.png"
       }
     },
     play() {

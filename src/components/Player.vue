@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-	<img type="button" class="img" src="../assets/rock.jpeg" v-on:click="rockChosen()" />
-  <img type="button" class="img" src="../assets/paper.jpeg" v-on:click="paperChosen()" />
-  <img type="button" class="img" src="../assets/scissors.jpeg" v-on:click="scissorsChosen()" />
+	<img type="button" class="img" src="../assets/rock.png" v-on:click="rockChosen()" />
+  <img type="button" class="img" src="../assets/paper.png" v-on:click="paperChosen()" />
+  <img type="button" class="img" src="../assets/scissors.png" v-on:click="scissorsChosen()" />
   </div>
 </template>
 
