@@ -106,3 +106,102 @@ export default {
     }
 }
 </script>
+<style scoped>
+*, .body {
+    background-color: #292c34;
+    overflow: hidden;
+}
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: Asap, sans-serif;
+    font-weight: 700;
+}
+.instructions {
+  padding: 10px;
+  margin-left: 200px;
+  width: 70%;
+}
+.instructions h3 {
+  text-align: center;
+  border: 2px solid gold;
+}
+.header-container {
+    background: #fff;
+    padding: 25px;
+    text-align: center;
+}
+.header-container>h1 {
+  background-color: #fff;
+  color: #292c34;
+  text-align: center;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.scoreboard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.scorecontainer {
+  margin-top: 20px;
+  padding: 20px;
+  width: 25%;
+  height: 200px;
+  background-color:aliceblue;
+  border: 3px solid rgb(68, 59, 151);
+  border-radius: 10px;
+}
+.score_text {
+  background-color: aliceblue;
+  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  border-bottom: 2px solid #000;
+  width:100%;
+}
+.float-child {
+  background-color:aliceblue;
+  width: 50%;
+  float: left;
+  padding: 20px;
+  
+}
+.float-child1 {
+  background-color:#292c34;
+  width: 50%;
+  float: left;
+  padding: 20px;
+  margin-left:200px;
+}
+.float-child2 {
+  margin-top:200px;
+}
+h3 {
+  background-color: aliceblue;
+  text-align: center;
+  font-family: 'Do Hyeon', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Source Code Pro', monospace;
+}
+.score {
+  padding: 1rem;
+  font-size: 40px;
+}
+.opponent_img {
+  transform: rotate(-90deg);
+  height:150px;
+  width: 140px;
+  padding-left: 20px;
+  border-radius: 10px;
+}
+.winner {
+  width: 320px;
+  padding: 10px;
+  border: 5px solid gray;
+  margin: 0;
+  background-color: coral;
+  color:#fff;
+}
+</style>
