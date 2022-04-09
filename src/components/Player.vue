@@ -1,40 +1,37 @@
 <template>
   <div class="container">
-  <button v-on:click="randomChoice()"> PLAYGAME </button>
+	<img type="button" class="img" src="../assets/rock.jpeg" v-on:click="rockChosen()" />
+  <img type="button" class="img" src="../assets/paper.jpeg" v-on:click="paperChosen()" />
+  <img type="button" class="img" src="../assets/scissors.jpeg" v-on:click="scissorsChosen()" />
   </div>
 </template>
 
 <script>
-const choices = ["rock", "paper", "scissors"];
 export default {
-  data() {
-    return {
-      choice: ""
-    };
-  },
   methods: {
-    randomChoice() {
-	const randomChoiceIndex = Math.floor(Math.random() * choices.length);
-	this.choice = choices[randomChoiceIndex];
-	this.$emit('getChoice', this.choice);
+    rockChosen() {
+      this.$emit('getChoice', 'rock')
+    },
+    paperChosen() {
+      this.$emit('getChoice', 'paper')
+    },
+    scissorsChosen() {
+      this.$emit('getChoice', 'scissors')
     },
   }
 };
 </script>
 
 <style scoped>
-button {
-  margin: 0 auto;
-  margin-bottom: 20px;
-  padding: 15px 32px;
-  background-color: #4CAF50;
-  display: inline-block;
-  font-size: 16px;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
+.container {
+  display: grid;
+  
 }
-button:hover {
-  background-color: #54e459;
+.img {
+  margin: 20px;
+  height:150px;
+  width: 120px;
+  transform: rotate(90deg);
+  border-radius: 10px
 }
 </style>
