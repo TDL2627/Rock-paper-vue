@@ -33,7 +33,7 @@
       <Opponent @click="play" v-on:getChoice="updateOpponentScore($event)" v-bind:choice="opponent_choice"/>
       
       <img type="button" v-if="!opponent_choice" src="../assets/quest.png" /> 
-      <img class="opponent_img" type="button" v-if="!!opponent_choice" :src="require('./assets/'+ImgSrc())" />
+      <img class="opponent_img" type="button" v-if="!!opponent_choice" :src="require('../assets/'+ImgSrc())" />
       
       <h2 style="color:white">Opponents choice: {{opponent_choice}}</h2>
     </div>
