@@ -1,8 +1,16 @@
 <template>
   <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
 	<img type="button" class="img" src="../assets/rock.png" v-on:click="rockChosen()" />
+      </div>
+      <div class="col-lg-4">
   <img type="button" class="img" src="../assets/paper.png" v-on:click="paperChosen()" />
+      </div>
+      <div class="col-lg-4">
   <img type="button" class="img" src="../assets/scissors.png" v-on:click="scissorsChosen()" />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -23,10 +31,6 @@ export default {
 </script>
 
 <style scoped>
-.container {
-  display: grid;
-  
-}
 .img {
   margin: 20px;
   height:150px;

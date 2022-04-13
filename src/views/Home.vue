@@ -9,26 +9,29 @@
       <!-- Game -->
     <div id="p-choice">
       <Player v-on:getChoice="updatePlayerChoice($event)" v-bind:choice="player_choice" />
-      <h2 style="color:black;">You chose: {{player_choice}}</h2>
+      <h2 style="color:black; text-align:center">You chose: {{player_choice}}</h2>
     </div>
     <div id="o-choice">
+      
       <Opponent @click="play" v-on:getChoice="updateOpponentScore($event)" v-bind:choice="opponent_choice"/>
+        <h2>Opponents choice: {{opponent_choice}}</h2>
       <img type="button" class="quest" v-if="!opponent_choice" src="../assets/quest.png" /> 
       <img class="opponent_img" type="button" v-if="!!opponent_choice" :src="require('../assets/'+ImgSrc())" />
-      <h2 style="color:white">Opponents choice: {{opponent_choice}}</h2>
     </div>
     <h1 class="winner" v-if="winner">
       {{ winner }}
     </h1>
-  </div>
-        <!-- ScoreBoard -->
+
+  <!-- ScoreBoard -->
       <div class="scoreboard">
       <h2 class="score_text">ScoreBoard</h2>
         <div class="score">
           <h3>YOU : {{player_score}}</h3>
           <h3>OPP : {{opponent_score}}</h3>
       </div>
+      </div>
   </div>
+      
  
 </template>
 

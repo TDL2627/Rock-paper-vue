@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-  <button v-on:click="randomChoice()"> PLAYGAME </button>
+  <button v-on:click="randomChoice()"> START </button>
   </div>
 </template>
 
@@ -24,7 +24,7 @@ export default {
 
 <style scoped>
 button {
-  margin: 0 auto;
+margin-left:40%;
   margin-bottom: 20px;
   padding: 15px 32px;
   background-color: #4CAF50;
