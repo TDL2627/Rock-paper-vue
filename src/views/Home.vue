@@ -1,7 +1,7 @@
 <template>
   <div class="home">
  <div class="header-container">
-        <h1>Rock Paper Scissors</h1>
+        <h1>Elemental Battle</h1>
       </div>
  <div class="container">
    <div class="row">
@@ -48,7 +48,7 @@
 import Player from '../components/Player.vue'
 import Opponent from '../components/Opponent.vue'
 
-const choices = ["rock", "paper", "scissors"];
+const choices = ["grass", "fire", "water"];
 export default {
   name: 'App',
   components: {
@@ -72,14 +72,14 @@ export default {
         this.opponent_choice = choice;
       }, 
     ImgSrc() {
-      if (this.opponent_choice == "rock") {
-        return "rock.png"
+      if (this.opponent_choice == "grass") {
+        return "grass.png"
       }
-      else if (this.opponent_choice == "paper") {
-        return "paper.png"
+      else if (this.opponent_choice == "fire") {
+        return "fire.png"
       }
       else  {
-        return "scissors.png"
+        return "water.png"
       }
     },
     play() {
@@ -88,9 +88,9 @@ export default {
     if (player_choice === opponent_choice) {
       this.winner = "It is a tie!";
     } else if (
-        (opponent_choice === "scissors" && player_choice === "paper") ||
-         (opponent_choice === "paper" && player_choice === "rock") ||
-         (opponent_choice === "rock" && player_choice === "scissors")
+        (opponent_choice === "water" && player_choice === "fire") ||
+         (opponent_choice === "fire" && player_choice === "grass") ||
+         (opponent_choice === "grass" && player_choice === "water")
       ) {
           this.opponent_score++;
           this.winner = "Opponent won :(";
@@ -147,7 +147,6 @@ h3 {
   font-size: 40px;
 }
 .opponent_img {
-  transform: rotate(-90deg);
   height:150px;
   width: 140px;
   padding-left: 20px;
@@ -159,7 +158,7 @@ h3 {
   padding: 10px;
   border: 5px solid gray;
   margin: 0;
-  background-color: coral;
+  background-color: gold;
   color:black;
 }
 </style>

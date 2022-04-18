@@ -5,7 +5,7 @@
 </template>
 
 <script>
-const choices = ["rock", "paper", "scissors"];
+const choices = ["grass", "fire", "water"];
 export default {
   data() {
     return {

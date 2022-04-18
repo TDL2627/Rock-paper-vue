@@ -2,13 +2,13 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-4">
-	<img type="button" class="img" src="../assets/rock.png" v-on:click="rockChosen()" />
+	<img type="button" class="img" src="../assets/grass.png" v-on:click="grassChosen()" />
       </div>
       <div class="col-lg-4">
-  <img type="button" class="img" src="../assets/paper.png" v-on:click="paperChosen()" />
+  <img type="button" class="img" src="../assets/fire.png" v-on:click="fireChosen()" />
       </div>
       <div class="col-lg-4">
-  <img type="button" class="img" src="../assets/scissors.png" v-on:click="scissorsChosen()" />
+  <img type="button" class="img" src="../assets/water.png" v-on:click="waterChosen()" />
       </div>
     </div>
   </div>
@@ -17,14 +17,14 @@
 <script>
 export default {
   methods: {
-    rockChosen() {
-      this.$emit('getChoice', 'rock')
+    grassChosen() {
+      this.$emit('getChoice', 'grass')
     },
-    paperChosen() {
-      this.$emit('getChoice', 'paper')
+    fireChosen() {
+      this.$emit('getChoice', 'fire')
     },
-    scissorsChosen() {
-      this.$emit('getChoice', 'scissors')
+    waterChosen() {
+      this.$emit('getChoice', 'water')
     },
   }
 };
@@ -35,7 +35,6 @@ export default {
   margin: 20px;
   height:150px;
   width: 120px;
-  transform: rotate(90deg);
   border-radius: 10px
 }
 </style>
