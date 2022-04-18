@@ -3,21 +3,30 @@
  <div class="header-container">
         <h1>Rock Paper Scissors</h1>
       </div>
- 
-    
-
-      <!-- Game -->
-    <div id="p-choice">
+ <div class="container">
+   <div class="row">
+     <div class="col-lg-6">
+ <div id="p-choice">
       <Player v-on:getChoice="updatePlayerChoice($event)" v-bind:choice="player_choice" />
       <h2 style="color:black; text-align:center">You chose: {{player_choice}}</h2>
     </div>
-    <div id="o-choice">
-      
-      <Opponent @click="play" v-on:getChoice="updateOpponentScore($event)" v-bind:choice="opponent_choice"/>
-        <h2>Opponents choice: {{opponent_choice}}</h2>
+     </div>
+     <div class="col-lg-6">
+ <div id="o-choice">
       <img type="button" class="quest" v-if="!opponent_choice" src="../assets/quest.png" /> 
       <img class="opponent_img" type="button" v-if="!!opponent_choice" :src="require('../assets/'+ImgSrc())" />
+      <h2 style="color:black; text-align:center">Opponents choice: {{opponent_choice}}</h2>
     </div>
+     </div>
+   </div>
+ </div>
+    
+
+      <!-- Game -->
+   
+
+   
+          <Opponent @click="play" v-on:getChoice="updateOpponentScore($event)" v-bind:choice="opponent_choice"/>
     <h1 class="winner" v-if="winner">
       {{ winner }}
     </h1>
@@ -86,7 +95,7 @@ export default {
           this.opponent_score++;
           this.winner = "Opponent won :(";
     } else if (player_choice === "") {
-      alert("You have to select your choise!")
+      alert("You have to select your choice!")
     }
     else {
       this.player_score++;
