@@ -153,7 +153,7 @@ h3 {
   border-radius: 10px;
 }
 .winner {
-
+ text-align: center;
   z-index:2922134;
   padding: 10px;
   border: 5px solid gray;
